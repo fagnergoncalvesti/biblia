@@ -1,0 +1,100 @@
+preciso que monte um sistema de busca e filtros para shop.php e de acordo com banco de dados
+
+Banco de dados: eshopper Tabela: produtos_parceiros
+
+
+INSERT INTO `produtos_parceiros`(`id`, `id_empresa`, `category_id`, `nome`, `descricao`, `preco`, `original_price`, `estoque`, `imagem`, `data_cadastro`, `information`, `reviews`, `Peso`, `Largura`, `Altura`, `Comprimento`, `cep_estoque`, `attribute_type`, `attribute_values`, `custom_attribute_name`, `short_description`, `cor`, `tamanho`, `material`, `marca`, `status`, `data_atualizacao`)
+
+
+
+✅ Plano Completo para Sistema de Busca e Filtros Inteligentes no E-commerce
+🎯 Objetivo Geral
+Garantir que o sistema de buscas e filtros do e-commerce funcione de forma precisa, mostrando apenas resultados e opções relevantes aos produtos disponíveis, e nunca exibindo filtros sem relação com o conteúdo atual.
+
+Importante: Se nenhum filtro for aplicado, todos os produtos da página atual devem ser exibidos normalmente.
+
+1. 🧱 Estrutura de Dados dos Produtos
+Cada produto deve ter os seguintes campos corretamente preenchidos:
+
+Nome do produto
+
+Descrição
+
+Categoria principal e subcategorias
+
+Marca
+
+Preço
+
+Atributos variáveis (cor, tamanho, voltagem, etc.)
+
+Tags ou palavras-chave
+
+Estoque
+
+Essas informações servirão de base tanto para a busca quanto para os filtros.
+
+2. 🔍 Busca com Resultados Relevantes
+Objetivo: A busca deve retornar apenas produtos compatíveis com os termos digitados.
+
+Estratégia:
+A pesquisa deve ser feita nos campos: nome, descrição, tags, e categoria.
+
+Aplicar um sistema de ordenação por relevância (termos no nome > descrição > tags).
+
+Implementar correção automática de palavras e sugestões com base nos produtos reais.
+
+Evitar mostrar qualquer resultado fora do contexto dos produtos existentes.
+
+3. 🧰 Filtros Inteligentes e Dinâmicos
+Objetivo: Exibir apenas filtros que fazem sentido com os produtos listados.
+
+Como funciona:
+Os filtros são carregados com base na categoria atual ou nos produtos carregados.
+
+Exemplo: Se estiver na categoria "Roupas", mostrar apenas tamanho, cor e marca.
+
+Excluir filtros como "voltagem", "frequência", etc., que não se aplicam a roupas.
+
+Se os produtos listados não possuírem uma determinada característica, o filtro não deve aparecer.
+
+Caso o usuário não selecione nenhum filtro:
+O sistema deve exibir todos os produtos disponíveis naquela página ou categoria, sem restrição alguma.
+
+4. ⚙️ Painel de Administração para Controle dos Filtros
+Criar uma interface no painel administrativo para configurar:
+
+Quais filtros devem aparecer em cada categoria.
+
+Quais atributos estão disponíveis por tipo de produto.
+
+Validação automática para impedir produtos com dados genéricos ou incorretos.
+
+5. 🧪 Testes de Qualidade e Validação
+Testar cenários reais e simulados:
+
+Buscar por palavras existentes e inexistentes.
+
+Verificar se os filtros exibidos são coerentes com os produtos visíveis.
+
+Garantir que ao limpar todos os filtros, todos os produtos da seção apareçam novamente.
+
+6. 📈 Monitoramento e Ajustes Contínuos
+Registrar e analisar:
+
+Quais termos são mais buscados.
+
+Quais buscas retornam poucos ou nenhum resultado.
+
+Filtros mais utilizados (para destacar ou otimizar).
+
+✅ Resumo Final
+Filtros dinâmicos: Apenas os filtros relevantes serão mostrados.
+
+Busca precisa: Retorna apenas produtos relacionados.
+
+Sem filtros aplicados? → Mostrar todos os produtos da categoria/página.
+
+Sem resultados na busca? → Mostrar uma mensagem clara: "Nenhum produto encontrado. Tente outros termos." com sugestões de busca.
+
+
